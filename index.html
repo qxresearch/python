@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>qxresearch @python</title>
+  <link rel="icon" href="cat.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 20px;
+      /* background-color: #FFFFE0; */
+      background: linear-gradient(-45deg, #ffffff, #fffeae, #b2ebff, #e0ffb5);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      height: 100%;
+
+    }
+    /* rgb - start */
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .d-flex {
+      display: flex;
+    }
+
+    .flex-column {
+      flex-direction: column;
+    }
+
+    .justify-content-center {
+      justify-content: center;
+    }
+
+    .align-items-center {
+      align-items: center;
+    }
+
+    .fw-light {
+      font-weight: lighter;
+    }
+
+    .text-white {
+      color: white;
+    }
+
+    .m-0 {
+      margin: 0;
+    }
+
+    .btn-group {
+      display: flex;
+    }
+
+    .my-5 {
+      margin-top: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .btn {
+      display: inline-block;
+      font-weight: 400;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      user-select: none;
+      border: 1px solid transparent;
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      border-radius: 0.25rem;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      color: #fff;
+      background-color: transparent;
+      border-color: #fff;
+    }
+
+    .btn-outline-light {
+      color: #fff;
+      background-color: transparent;
+      background-image: none;
+      border-color: #fff;
+    }
+
+    .btn-outline-light:hover {
+      color: #212529;
+      background-color: #fff;
+      border-color: #fff;
+    }
+
+    .btn-outline-light:focus,
+    .btn-outline-light.focus {
+      box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5);
+    }
+
+    .btn-outline-light.disabled,
+    .btn-outline-light:disabled {
+      color: #fff;
+      background-color: transparent;
+    }
+
+    .btn-outline-light:not(:disabled):not(.disabled):active,
+    .btn-outline-light:not(:disabled):not(.disabled).active,
+    .show>.btn-outline-light.dropdown-toggle {
+      color: #212529;
+      background-color: #fff;
+      border-color: #fff;
+    }
+
+    .btn-outline-light:not(:disabled):not(.disabled):active:focus,
+    .btn-outline-light:not(:disabled):not(.disabled).active:focus,
+    .show>.btn-outline-light.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5);
+    }
+
+    .text-decoration-none {
+      text-decoration: none;
+    }
+
+    a {
+      color: #212534;
+      text-decoration: none;
+      font-family: sans-serif;
+      font-weight: bold;
+      margin-top: 2rem;
+    }
+
+    /* rgb - end */
+    
+    h1 {
+      text-align: center;
+    }
+
+    .abc{
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;  
+      
+    }
+    
+    .awm{
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;    display: flex;
+    justify-content: space-between;
+    
+
+    margin: 0;
+      padding: 20px;
+      /* background-color: #FFFFE0; */
+      
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      height: 100%;
+      border-radius: 15px;
+      border: 4px solid rgba(255, 255, 255, 0.5);
+      background-color: transparent;
+
+      
+      
+    }
+    /* .bb{
+      margin: 0 20px;
+      text-align: center;
+      display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+
+    */
+
+    .link-item {
+      font-family: 'Courier New', Courier, monospace;
+    margin: 0 10px;
+  } 
+
+
+  .no-underline {
+      position: relative;
+      color: blue;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    /* .no-underline:hover {
+      text-decoration: none;
+      color: black;
+    } */
+
+    .no-underline::after {
+      font-family: 'Courier New', Courier, monospace;
+      content: "Investigate";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgb(255, 255, 255);
+      padding: 5px;
+      color: black;
+      font-size: 14px;
+      opacity: 0;
+      visibility: hidden;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .no-underline:hover::after {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(10px);
+    }
+
+    /* links */
+
+.link {
+  text-decoration: none;
+  color: rgb(46, 60, 186);
+  position: relative;
+  transition: color 0.3s ease;
+  margin-right: 30px;
+  font-weight: bold;
+  
+}
+
+.link:hover {
+  color: dimgray;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: rgb(54, 54, 54);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.link:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+
+    /*  */
+    
+    .course-container {
+      max-width: 80%;
+      margin: 0 auto;
+
+    }
+    
+    .course-item {
+
+
+  max-width: 70%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(0.75rem);
+  border-radius: 1.25rem;
+  border: 2px solid rgba(0, 0, 0, 0.18);
+
+
+  width: 100%;
+
+
+
+  background: rgba(255, 255, 255, 0.375);
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  
+    }
+
+    .checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 10px; /* Adjust the margin as needed */
+  margin-bottom: 9px;
+}
+
+.checkbox-container label {
+      font-weight: normal;
+    }
+
+    
+    .checkbox-grow {
+      transform: scale(1);
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .checkbox-grow.checked {
+      transform: scale(1.2);
+    }
+
+    /* star - rating */
+
+    @keyframes dropIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes dropOut {
+      0% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+    }
+
+    #rating-component {
+      width: fit-content;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.375);
+      box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+      border-radius: 2rem;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.125);
+      animation-name: dropIn;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+
+       /* Adjust the delay time here (in seconds) */
+    }
+
+    #rating-component.animating {
+      animation-name: dropOut;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+    }
+
+    #star-icon {
+      margin-right: 5px;
+      color: gold;
+    }
+
+
+    /*  */
+
+/* Example CSS for customizing the appearance */
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: none;
+  font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 20px;
+      /* background-color: #FFFFE0; */
+      
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      height: 100%;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      background-color: transparent;
+}
+
+details p {
+  background-color: transparent;
+  padding: 10px;
+  
+}
+    /*  */
+
+
+  /* random */
+
+  #project-container {
+      width: auto;
+      height: 20px;
+      border: 0px solid #ccc;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+    }
+    
+    #project-container a {
+      text-decoration: none;
+      color: rgb(221, 139, 7);
+      display: inline-block;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+
+    }
+
+  /*  */
+
+  /* form - start */
+  .container {
+      max-width: 55%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      margin-bottom: 20px;
+    padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(0.75rem);
+  border-radius: 1.25rem;
+  border: 2px solid rgba(0, 0, 0, 0.18);
+      
+    }
+
+    h2 {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+      
+
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      text-align: left;
+      
+    }
+
+    input[type="text"],
+    textarea {
+      width: 90%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      background-color: #f7f7f7;
+      box-sizing: border-box;
+      border: 2px solid rgba(133, 133, 133, 0.5);
+      background-color: transparent;
+      
+    }
+
+    input[type="submit"] {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  background-color: #000000;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.5s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.5s ease;
+}
+
+    input[type="submit"]:hover {
+      background-color: #ffffff;
+      
+    }
+  /* form - end */
+
+
+  /* corner - start */
+
+  .corner-image {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+
+  /* corner - end */
+
+  /* heading image - start */
+
+  .heading-image {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    .heading-image img {
+      max-width: 200px;
+      height: auto;
+    }
+  
+  /* heading image - end */
+
+  /* footer - start */
+
+  .footer {
+      background-color: #f9f9f9;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .footer a {
+      color: #555;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      color: #000;
+    }
+
+    .footer i {
+      font-size: 20px;
+      margin-right: 5px;
+    }
+
+    /* footer - end */
+
+
+    /* notification - start */
+    
+    #page-container {
+      width: 100%;
+      height: 100%;
+    }
+    
+    #dialog-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 350px;
+      min-height: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+    
+    .dialog-box {
+      position: relative;
+      min-height: 80px;
+      max-height: 180px;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .dialog-box .header {
+      height: 25px;
+      position: relative;
+      color: black;
+    }
+    
+    .left {
+      float: left;
+      text-align: left;
+      width: content-max;
+      padding: 3px 0 0 10px;
+    }
+    
+    .right {
+      float: right;
+      text-align: right;
+      width: content-max;
+      padding: 3px 10px 0 0;
+    }
+    
+    .contents {
+      z-index: 100;
+      position: inherit;
+      font-size: 0.8em;
+    }
+    
+    .main-content {
+      padding: 8px 20px 10px 10px;
+      height: content-max;
+    }
+    
+    #footer-text {
+      font-size: 0.8em;
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+    }
+
+    /* notification - end  */
+
+
+
+
+
+  </style>
+
+
+
+
+
+
+</head>
+<body>
+
+
+  <div id="rating-component">
+    <span class="star-icon"><i class="fas fa-star"></i></span> 4.7 / 5
+  </div>
+
+  <div class="heading-image">
+    <img src="8.png"  alt="Heading Image">
+  </div>
+  
+  <!-- <img src="cac.png" class="corner-image" width="70" height="70" alt="Corner Image"> -->
+  <div class="course-container">
+    <!-- <h1>Computational Thinking : Python</h1> -->
+   
+    <div class="abc">Rohit Prasan Manadal <a href="https://github.com/xiaowuc2" target="_blank" class="no-underline">@xiaowuc2</a></div>
+    
+    <br><br>
+
+    This course seeks to offer students an awareness of the role computing may play in problem solving and to let students, regardless of major, feel justified in their ability to develop simple programs that enable them to accomplish their goals. We'll start with the basics of python and dive deep into core concepts of python along with solving LeetCode problems. This course focuses on solving your doubts and evoke rational questions. Feel free to shoot me with your all creative questions pertinent to this course at the discussion panel.
+  
+    <br>
+    <br>
+
+    <br><br>
+    <div class="awm">
+      <a class="link-item" href="#" class="link">Notes</a>
+      <a class="link-item" href="#" class="link">Assignment</a>
+      <a class="link-item" href="#" class="link">Projects</a>
+      <a class="link-item" href="#" class="link">Shedule</a>
+      <a class="link-item" href="#" class="link">YouTube</a>
+    </div>
+    <br><br><br>
+
+
+
+    <div class="course-item">
+      <h2>Python Objects</h2>
+      <ul>
+        <li>Variable</li>
+        <li>Operator</li>
+        <li>Data Types</li>
+        <li>More on String</li>
+        <li>Compound Data Types</li>
+        <li>More on List</li>
+        <li>More on Tuple</li>
+        <li>More on Dictionary</li>
+        <li>More on Set</li>
+        <li>Useful Function</li>
+      </ul>
+    </div>
+    <div class="course-item">
+      <h2>Conditional Statements</h2>
+      <ul>
+        <li>if</li>
+        <li>if else</li>
+        <li>if elif else</li>
+        <li>Applications</li>
+      </ul>
+    </div>
+    <div class="course-item">
+      <h2>File Handling</h2>
+      <ul>
+        <li>Reading and writing files</li>
+        <li>Working with CSV and JSON files</li>
+      </ul>
+    </div>
+    <div class="course-item">
+      <h2>Object-Oriented Programming</h2>
+      <ul>
+        <li>Classes and objects</li>
+        <li>Nested Classes</li>
+        <li>Access Modifiers 1</li>
+        <li>Four Pillars of OOP</li>
+        <li>Inheritance</li>
+        <li>Polymorphism</li>
+        <li>Encapsulation</li>
+        <li>Abstraction</li>
+        <li>Access Modifiers 1</li>
+        <li>Applications</li>
+      </ul>
+    </div>
+    <!-- Add more course sections as needed -->
+  </div>
+
+
+  <div id="project-container">
+    Exciting Projects : 
+    <a href="#" id="project-link"></a>
+  </div>
+
+  <script>
+    var projectLinks = [
+      { title: "Collatz Conjecture", url: "https://example.com/project1" },
+      { title: "Benford's Law", url: "https://example.com/project2" },
+      { title: "Stock Price Analysis", url: "https://example.com/project3" },
+      { title: "CSPRNG", url: "https://example.com/project4" },
+      { title: "Time Complexity Visualization", url: "https://example.com/project5" }
+    ];
+
+    function getRandomLink() {
+      var randomIndex = Math.floor(Math.random() * projectLinks.length);
+      return projectLinks[randomIndex];
+    }
+
+    function fadeInLink() {
+      var projectLink = document.getElementById("project-link");
+      var randomLink = getRandomLink();
+
+      projectLink.textContent = randomLink.title;
+      projectLink.href = randomLink.url;
+      projectLink.style.opacity = "1";
+
+      setTimeout(function() {
+        fadeOutLink();
+      }, 2000);
+    }
+
+    function fadeOutLink() {
+      var projectLink = document.getElementById("project-link");
+      projectLink.style.opacity = "0";
+
+      setTimeout(function() {
+        fadeInLink();
+      }, 500);
+    }
+
+    fadeInLink();
+  </script>
+
+<div class="container">
+  <h2>For Pricing, Schedules & Enquiry :</h2>
+  <form action="https://formspree.io/f/xgebbpel" method="POST">
+    <div class="form-group">
+      <label for="name"></label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+      <label for="email"></label>
+      <input type="text" id="email" name="_replyto" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+      <label for="message"></label>
+      <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Send Message">
+    </div>
+  </form>
+</div>
+
+<style>
+  footer {
+    text-align: center;
+  }
+</style>
+
+<br><br>
+<footer>
+  <p>&copy; 2023 @qxresearch. All rights reserved.</p>
+</footer>
+
+
+<!-- Include the necessary Font Awesome CDN link -->
+<div id="page-container">
+  <div id="dialog-container">
+    <div class="dialog-box">
+      <div class="background-blur"></div>
+      <div class="header">
+        <div class="background-blur"></div>
+        <div class="contents">
+          <div class="left">
+            <img src="cat.png" width="20" alt="iMessage Icon">
+          </div>
+          <div class="right">
+            Now
+          </div>
+        </div>
+      </div>
+      <div class="contents main-content">
+        <strong>xiaowuc2</strong><br>
+        Hope to see you soon!
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    // Function to show the notification after 2 seconds
+    setTimeout(function() {
+      var dialogContainer = document.getElementById("dialog-container");
+      dialogContainer.style.opacity = "1";
+      dialogContainer.style.pointerEvents = "auto";
+    }, 7000);
+  
+    // Function to fade out the notification after 2 seconds
+    setTimeout(function() {
+      var dialogContainer = document.getElementById("dialog-container");
+      dialogContainer.style.opacity = "0";
+      dialogContainer.style.pointerEvents = "none";
+    }, 10000);    
+  </script>
+
+
+  <div class="glass-element"></div>
+
+  <script>
+    const elements = document.querySelectorAll('.glass-element');
+
+    elements.forEach(element => {
+      element.addEventListener('mousedown', startDrag);
+
+      function startDrag(event) {
+        const startX = event.clientX;
+        const startY = event.clientY;
+        const initialX = parseFloat(getComputedStyle(element).getPropertyValue('left'));
+        const initialY = parseFloat(getComputedStyle(element).getPropertyValue('top'));
+        const offsetX = startX - initialX;
+        const offsetY = startY - initialY;
+
+        document.addEventListener('mousemove', dragElement);
+        document.addEventListener('mouseup', stopDrag);
+
+        function dragElement(event) {
+          const newX = event.clientX - offsetX;
+          const newY = event.clientY - offsetY;
+
+          element.style.left = newX + 'px';
+          element.style.top = newY + 'px';
+        }
+
+        function stopDrag() {
+          document.removeEventListener('mousemove', dragElement);
+          document.removeEventListener('mouseup', stopDrag);
+        }
+      }
+    });
+
+  </script>
+    <script>
+      // JavaScript code to add the 'animating' class and trigger the drop-out animation
+      setTimeout(function() {
+        var ratingComponent = document.getElementById('rating-component');
+        ratingComponent.classList.add('animating');
+      }, 5000); // Delay in milliseconds before triggering the animation
+    </script>
+  
+</body>
+</html>
