@@ -80,7 +80,7 @@
       padding: 0.375rem 0.75rem;
       font-size: 1rem;
       line-height: 1.5;
-      border-radius: 0.25rem;
+      border-radius: 0.15px;
       transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
       color: #fff;
       background-color: transparent;
@@ -209,7 +209,7 @@
       font-size: 14px;
       opacity: 0;
       visibility: hidden;
-      border-radius: 10px;
+      border-radius: 15px;
       transition: all 0.3s ease;
       white-space: nowrap;
     }
@@ -271,12 +271,11 @@
   margin-bottom: 20px;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  border-radius: 15px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(0.75rem);
   -webkit-backdrop-filter: blur(0.75rem);
-  border-radius: 1.25rem;
-  border: 2px solid rgba(0, 0, 0, 0.18);
+
 
 
   width: 100%;
@@ -285,8 +284,8 @@
 
   background: rgba(255, 255, 255, 0.375);
   box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
-  border-radius: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  border-radius: 15px;
+  border: 1px solid rgb(255, 255, 255);
   
     }
 
@@ -345,7 +344,7 @@
       padding: 10px;
       background: rgba(255, 255, 255, 0.375);
       box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
-      border-radius: 2rem;
+      border-radius: 15px;
       text-align: center;
       border: 1px solid rgba(255, 255, 255, 0.125);
       animation-name: dropIn;
@@ -432,12 +431,32 @@ details p {
       margin-bottom: 20px;
     padding: 10px;
   background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  border-radius: 15px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(0.75rem);
   -webkit-backdrop-filter: blur(0.75rem);
-  border-radius: 1.25rem;
+  border-radius: 15px;
   border: 2px solid rgba(0, 0, 0, 0.18);
+
+    margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(0.75rem);
+
+
+
+  width: 100%;
+
+
+
+  background: rgba(255, 255, 255, 0.375);
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  border: 1px solid rgb(255, 255, 255);
       
     }
 
@@ -468,7 +487,7 @@ details p {
       width: 90%;
       padding: 10px;
       border: none;
-      border-radius: 10px;
+      border-radius: 15px;
       background-color: #f7f7f7;
       box-sizing: border-box;
       border: 2px solid rgba(133, 133, 133, 0.5);
@@ -484,7 +503,7 @@ details p {
   color: #fff;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 15px;
   transition: background-color 0.5s ease;
 }
 
@@ -575,7 +594,7 @@ input[type="submit"]:hover {
       position: relative;
       min-height: 80px;
       max-height: 180px;
-      border-radius: 10px;
+      border-radius: 15px;
       margin-bottom: 8px;
       overflow: hidden;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
@@ -694,13 +713,43 @@ input[type="submit"]:hover {
         <li>Applications</li>
       </ul>
     </div>
+
     <div class="course-item">
-      <h2>File Handling</h2>
+      <h2>Loop</h2>
       <ul>
-        <li>Reading and writing files</li>
-        <li>Working with CSV and JSON files</li>
+            <li>for</li>
+            <li>Nested for</li>
+            <li>while</li>
+            <li>for vs while</li>
+            <li>Compund Datatypes with for</li>
       </ul>
     </div>
+
+    <div class="course-item">
+      <h2>Functions</h2>
+      <ul>
+            <li>Functions</li>
+            <li>Nested Functions</li>
+            <li>return vs print</li>
+            <li>args and kwargs</li>
+            <li>Functions Integrated</li>
+            <li>Recursion</li>
+      </ul>
+    </div>
+    
+    <div class="course-item">
+      <h2>Modules</h2>
+      <ul>
+            <li>Useful Modules</li>
+            <li>Creating Modules</li>
+            <li>Calling Modules</li>
+            <li>__name__ , __main__</li>
+      </ul>
+    </div>
+    
+
+
+    
     <div class="course-item">
       <h2>Object-Oriented Programming</h2>
       <ul>
@@ -717,6 +766,85 @@ input[type="submit"]:hover {
       </ul>
     </div>
     <!-- Add more course sections as needed -->
+
+
+    <div class="course-item">
+      <h2>Exception Handling</h2>
+      <ul>
+            <li>Common Errors</li>
+            <li>Handling Errors (if)</li>
+            <li>try else Block</li>
+            <li>finally Block</li>
+            <li>Exception Handling with OOP</li>
+      </ul>
+    </div>
+    
+    <div class="course-item">
+      <h2>Date TIme</h2>
+      <ul>
+            <li>What is Time?</li>
+            <li>Methods</li>
+            <li>Counting Seconds</li>
+            <li>Date Time Applications</li>
+      </ul>
+    </div>
+    
+
+    <div class="course-item">
+      <h2>Threading</h2>
+      <ul>
+            <li>Commandline Integration</li>
+            <li>Parsing Commands</li>
+            <li>Parsing Parameters</li>
+            <li>Building Applications</li>
+      </ul>
+    </div>
+    
+    <div class="course-item">
+      <h2>Database Connectivity</h2>
+      <ul>
+            <li>Databases</li>
+            <li>Database with Python</li>
+            <li>SQL Applications</li>
+      </ul>
+    </div>
+
+    <div class="course-item">
+      <h2>File Handling</h2>
+      <ul>
+        <li>Reading Files</li>
+        <li>Writing Files</li>
+        <li>Working with JSON</li>
+        <li>Integrations with OOP</li>
+      </ul>
+    </div>
+    
+    
+    <div class="course-item">
+      <h2>Intro to Data Science</h2>
+      <ul>
+            <li>Working with .csv .xlsx</li>
+            <li>Numpy</li>
+            <li>Pandas</li>
+            <li>Matplotlib</li>
+            <li>Working with Datasets</li>
+      </ul>
+    </div>
+    
+
+    <div class="course-item">
+      <h2>Intro to Machine Learning</h2>
+      <ul>
+            <li>What is Machine Learning</li>
+            <li>Integration with Python</li>
+            <li>Regression Algorithms</li>
+            <li>Classification Algorithms</li>
+            <li>Data Analysis (Project)</li>
+      </ul>
+    </div>
+    
+
+
   </div>
 
 
