@@ -1,0 +1,144 @@
+.alert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // position: relative;
+  padding: 15px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+  &-content {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &-success {
+    border-left: 2px solid #02A959;
+  }
+  &-info {
+    border-left: 2px solid #2A83D6;
+    position: absolute;
+    top: 0px;
+  }
+  &-warning {
+    border-left: 2px solid #EAA318;
+  }
+  &-danger {
+    border-left: 2px solid #D60B2F;
+  }
+}
+
+.alert div:not(:first-child){
+  margin: 0 10px;
+}
+.alert .emoji, .alert .alert-message {
+  padding-top: 3px;
+}
+
+.alert .alert-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.alert-success .alert-icon {
+ background-color: #02A959;
+}
+.alert-info .alert-icon {
+  background-color: #2A83D6;
+}
+.alert-warning .alert-icon {
+  background-color: #EAA318;
+}
+.alert-danger .alert-icon {
+  background-color: #D60B2F;
+}
+.dismiss-btn svg:hover path {
+  stroke: #777;
+}
+.emoji2 {
+    font-size: 20px;;
+    min-width: 1em;
+    margin: 0 0.4em;
+}
+.emoji2::after {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.happy::after {
+  content: '😀',;
+  --grin-1: '😁';
+  --grin-2: '😂';
+  animation-name: threeFrames;
+  animation-duration: 2s;
+}
+.angry::after {
+  content: '😟',;
+  --grin-1: '😠';
+  --grin-2: '😡';
+  animation-name: threeFrames;
+  animation-duration: 2s;
+}
+.warning::after {
+  content: '🙂',;
+  --grin-1: '🙁';
+  --grin-2: '🙄';
+  animation-name: threeFrames;
+  animation-duration: 2s;
+}
+.info::after {
+  content: '✊',;
+  --grin-1: '✋';
+  --grin-2: '✌';
+  animation-name: threeFrames;
+  animation-duration: 2s;
+}
+
+
+  #pos-absolute {
+    position: fixed;
+    display: none;
+    top: 50px;
+    right: -500px;
+  }
+
+  .slideIn {
+    animation: slideIn 1s;
+  }
+
+  .fadeOut {
+    animation: fadeOut 3s ease-in-out;
+  }
+
+@keyframes threeFrames {
+  33.333% {
+      content: var(--grin-1);
+      transform: rotate(90deg);
+  }
+
+  66.666% {
+      content: var(--grin-2);
+      transform: rotate(90deg);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    right: -1000px;
+  }
+
+  100% {
+    right: -500px;
+  }
+}

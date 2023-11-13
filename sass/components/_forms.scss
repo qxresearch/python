@@ -1,0 +1,95 @@
+.input-field {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  padding: 0.625rem .75rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: $mid-black;
+  background-color: rgb(248, 248, 248);
+  background-clip: padding-box;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  &:focus {
+    outline: none;
+    border-color: rgba(42, 131, 214, 0.27);
+    background-color: transparent;
+    transition: border-color .15s ease-in-out;
+  }
+
+  &::-moz-placeholder {
+    color: rgba(54, 54, 54, 0.3);
+  }
+
+
+}
+
+.input-field:disabled,
+.input-field:read-only {
+  background-color: rgba(237, 237, 237, 0.2);
+}
+
+.input-field::-moz-placeholder,
+.textarea::-moz-placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+
+.input-field::-webkit-input-placeholder {
+  color: #c4c4c4;
+}
+
+.label {
+  color: #363636;
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.label:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+.input-control {
+  margin-bottom: 10px;
+}
+
+.form-horizontal {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form-vertical {
+  position: relative;
+}
+
+.textarea {
+  resize: none;
+
+  &::-moz-placeholder {
+    color: rgba(54, 54, 54, 0.3);
+  }
+}
+.has-icon {
+  position: relative;
+}
+.has-icon ::placeholder {
+  padding-left: 5px;
+}
+.icon-left {
+  position: absolute;
+  left: 10px;
+  top: 45px;
+  // margin: auto 10px auto 0;
+}
+.has-icon .icon-left > svg path {
+  stroke: rgba(0, 0, 0, 0.2);
+}
+.has-icon .input-field:focus + .icon-left > svg path {
+  position: relative;
+  stroke: rgba(42, 131, 214, 0.27);
+}
+.has-icon .input-field {
+  padding-left: 30px;
+}
