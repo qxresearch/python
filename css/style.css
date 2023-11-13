@@ -93,7 +93,7 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     background-color: rgb(0, 0, 0);
-    background-image: url('file:///G:/Website%20(cach)/flamesui-gh-pages/assets/images/lk.gif');
+    background-image: url('../assets/images/lk.gif');
     background-size: 44%;
     background-position: center;
     background-repeat:repeat;
